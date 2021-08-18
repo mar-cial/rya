@@ -1,41 +1,77 @@
 import Head from 'next/head'
-import Logo from '../components/logo'
 import Link from 'next/link'
-import Hamburger from '../components/hamburger'
-import areas from '../components/home/area.json'
-import Area from '../components/home/area'
+import Navigation from '../sections/navigation/navigation'
+import { useState } from 'react'
+import FilterSection from '../sections/filtersSection/filterSection'
+import CortinasSection from '../sections/cortinasSection/cortinasSection'
 
-const Home = () => {
+const Landing = () => {
+  const [openMenu, setOpenMenu] = useState(false)
+
+
+  const toggle = () => {
+    setOpenMenu(!openMenu)
+  }
+
   return (
     <div className={'p-4'}>
       <Head>
         <title>Rya Soluciones Ambientales</title>
-        <link rel="icon" href="/logo.ico" />
       </Head>
 
+      {openMenu ? <Navigation /> : ''}
 
       <header className={'grid grid-cols-2'}>
-        <div className={'flex items-center'}>
-          <Link href="/"><Logo className={'h-14 w-14 cursor-pointer'} /></Link>
-          <Link href="/"><a className={'font-bold text-xl'}>Inicio</a></Link>
-        </div>
-        <div className={'flex items-center justify-end'}>
-          <Hamburger className={'h-16 w-16'} />
-        </div>
+        <span className={'font-bold text-xl'}>Logo</span>
+        <button className={`${openMenu ? 'bg-black text-white' : 'bg-white border-2 border-black font-black '} rounded-md font-bold text-md place-self-end px-4 py-1`} onClick={() => toggle()}>{openMenu ? "Cerrar menú" : "Abrir menú"}</button>
       </header>
-      <main className={'pt-6'}>
-        <h1 className={'text-2xl font-bold pb-2'}>Expertos en la eliminación de contaminantes en el aire.</h1>
-        <p>Vendemos filtros de aire plisados, de poliéster, y muchos diferentes productos ambientados a mantener un ambiente controlado en su espacio laboral.</p>
-      </main>
-      <section className={'pt-6'}>
-        <header><h2 className={'text-xl font-bold'}>Nuestras áreas de especialidad son:</h2></header>
-        <div className={'grid grid-cols-2 grid-rows-3 gap-2 pt-6'}>
-          {areas.map((v, i) => <Area key={i} title={v.title} />)}
 
+      <main>
+        <div className={'w-1/2'}>
+          <h1 className={'text-4xl font-bold'}>Expertos en la filtración de agentes contaminantes en su área laboral</h1>
+          <p>En Rya contamos con la solución a todas sus necesidades de fitlración. También contamos con todas las soluciones para sus necesidades de mantener un ambiente limpio y controlado.</p>
+          <button className={'bg-black rounded-md text-white py-1 px-4 font-bold'}>Contáctenos</button>
         </div>
+      </main>
+
+      <FilterSection />
+
+      <CortinasSection />
+
+      <section className={'grid md:grid-cols-3 md:gap-6'}>
+        <header>
+          <h2 className={'font-bold text-2xl'}>Cortinas de aire</h2>
+          <p>
+            Evite la pérdida de frío o de calor, sin fricción al pasar. Las cortinas de aire evitan la transferencia de temperaturas así como repelen contaminantes e insectos.
+          </p>
+        </header>
+        <div>
+          <header>
+            <h2 className={'font-bold text-xl'}>
+              Características de nuestras cortinas:
+            </h2>
+          </header>
+          <ul>
+            <li>Característica 1</li>
+            <li>Característica 2</li>
+            <li>Característica 3</li>
+            <li>Característica 4</li>
+          </ul>
+        </div>
+        <aside className={'border-2 border-black'}>
+          <h3 className={'font-bold text-xl'}>
+            Foto de cortina de plástico
+          </h3>
+          <div className={'flex items-center justify-center border-2 border-black h-full'}>
+            <p>Aquí habrá una foto</p>
+          </div>
+        </aside>
       </section>
-    </div>
+
+
+
+    </div >
   )
 }
 
-export default Home
+export default Landing
