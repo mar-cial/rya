@@ -13,7 +13,8 @@ const NavigationContainer = ({status, action}) => {
                                        whileHover={{x: 5}}
                                        whileTap={{x: 0}}
                                        key={i}
-                                       onClick={action}>
+                                       onClick={action}
+                                       >
 
                                     <Link href={v.url} passHref>
                                         <a>{v.text}</a>

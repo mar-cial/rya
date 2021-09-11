@@ -25,9 +25,9 @@ const Layout = ({children}) => {
         <div className={'p-4'}>
             <Head>
                 <title>Rya Soluciones Ambientales</title>
-
+                <link rel="icon" href="/logo.svg" />
             </Head>
-            <NavigationContainer status={openMenu}/>
+            <NavigationContainer status={openMenu} action={() => toggle()}/>
 
             <Header status={openMenu} action={() => toggle()}/>
             {children}

@@ -1,3 +1,5 @@
+import AsideSectionPhoto from "../AsideSectionPhoto";
+
 const FilterSection = () => {
     return (
         <section className={'grid md:grid-cols-3 md:gap-6 py-8'}>
@@ -20,14 +22,7 @@ const FilterSection = () => {
                     <li>Característica 4</li>
                 </ul>
             </div>
-            <aside className={'border-2 border-black'}>
-                <h3 className={'font-bold text-xl'}>
-                    Foto de cortina de plástico
-                </h3>
-                <div className={'flex items-center justify-center border-2 border-black h-40'}>
-                    <p>Aquí habrá una foto</p>
-                </div>
-            </aside>
+            <AsideSectionPhoto imageTitle={"Filtros plisados de aire"} imageLink={"/productos"} imageSrc={"/pleatedFilter.jpg"}/>
         </section>
     )
 }
