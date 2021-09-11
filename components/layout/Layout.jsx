@@ -18,7 +18,9 @@ const Layout = ({children}) => {
     const [openMenu, setOpenMenu] = useState(false)
 
     const toggle = () => {
+        console.log(`Current state: ${openMenu}`)
         setOpenMenu(!openMenu)
+        console.log(`State después de ser cambiado: ${openMenu}`)
     }
 
     return (
@@ -27,7 +29,7 @@ const Layout = ({children}) => {
                 <title>Rya Soluciones Ambientales</title>
                 <link rel="icon" href="/logo.svg" />
             </Head>
-            <NavigationContainer status={openMenu} action={() => toggle()}/>
+            <NavigationContainer status={openMenu} action={() => setOpenMenu(false)}/>
 
             <Header status={openMenu} action={() => toggle()}/>
             {children}
