@@ -1,0 +1,38 @@
+/*
+* Created by cesarmarcial on 10/09/21
+*/
+
+// general imports
+
+// components imports
+import NavigationContainer from "./navigation/navigationContainer";
+import Header from "./header/header";
+
+// function imports
+import Head from 'next/head'
+import {useState} from "react";
+
+
+// Beginning of component: Layout
+const Layout = ({children}) => {
+    const [openMenu, setOpenMenu] = useState(false)
+
+    const toggle = () => {
+        setOpenMenu(!openMenu)
+    }
+
+    return (
+        <div className={'p-4'}>
+            <Head>
+                <title>Rya Soluciones Ambientales</title>
+
+            </Head>
+            <NavigationContainer status={openMenu}/>
+
+            <Header status={openMenu} action={() => toggle()}/>
+            {children}
+        </div>
+    )
+}
+
+export default Layout

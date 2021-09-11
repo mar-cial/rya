@@ -1,8 +1,3 @@
-import Head from 'next/head'
-
-import Header from "../components/sections/header/header";
-import { useState } from 'react'
-import NavigationContainer from "../components/sections/navigation/navigationContainer";
 import FilterSection from "../components/sections/filtersSection/filtersSection";
 import CortinasDeAireSection from "../components/sections/cortinasDeAireSection/cortinasDeAireSection";
 import CortinasRapidasSection from "../components/sections/cortinasRapidasSection/cortinasRapidasSection";
@@ -10,21 +5,8 @@ import DockSealsSection from "../components/sections/dockSealsSection/dockSealsS
 import DockLevelerSection from "../components/sections/dockLevelersSection/dockLevelerSection";
 
 const Landing = () => {
-  const [openMenu, setOpenMenu] = useState(false)
-
-  const toggle = () => {
-    setOpenMenu(!openMenu)
-  }
-
   return (
-    <div className={'p-4'}>
-      <Head>
-        <title>Rya Soluciones Ambientales</title>
-      </Head>
-
-      <NavigationContainer status={openMenu}/>
-
-      <Header status={openMenu} action={() => toggle()}/>
+    <>
 
       <main className={'py-6'}>
         <div className={'md:w-1/2 grid gap-6 pt-8'}>
@@ -41,7 +23,7 @@ const Landing = () => {
         <CortinasRapidasSection />
         <DockSealsSection />
         <DockLevelerSection />
-    </div >
+    </>
   )
 }
 
