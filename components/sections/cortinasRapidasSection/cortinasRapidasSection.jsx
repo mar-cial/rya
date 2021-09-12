@@ -1,3 +1,5 @@
+import AsideSectionPhoto from "../AsideSectionPhoto";
+
 const CortinasRapidasSection = () => {
     return (
         <section className={'grid md:grid-cols-3 md:gap-6 py-8'}>
@@ -7,7 +9,7 @@ const CortinasRapidasSection = () => {
                     Las cortinas rápidas son el más alto nivel en productos para separar áreas. El acceso rápido y automático permite una productividad incomparable en el ambiente laboral.
                 </p>
             </header>
-            <div>
+            <div className={'py-6 md:py-0'}>
                 <header>
                     <h2 className={'font-bold text-xl'}>
                         Características de nuestras cortinas:
@@ -20,14 +22,12 @@ const CortinasRapidasSection = () => {
                     <li>Característica 4</li>
                 </ul>
             </div>
-            <aside className={'border-2 border-black'}>
-                <h3 className={'font-bold text-xl'}>
-                    Foto de cortina de plástico
-                </h3>
-                <div className={'flex items-center justify-center border-2 border-black h-40'}>
-                    <p>Aquí habrá una foto</p>
-                </div>
-            </aside>
+            <AsideSectionPhoto
+                imageSrc={'/highSpeedDoor.jpg'}
+                imageLink={'/productos'}
+                imageTitle={'Cortinas rápidas'}
+                imgAlt={'Cortinas rápidas'}
+            />
         </section>
     )
 }

@@ -9,7 +9,7 @@ const FilterSection = () => {
                     Evite la pérdida de frío o de calor, sin fricción al pasar. Las cortinas de aire evitan la transferencia de temperaturas así como repelen contaminantes e insectos.
                 </p>
             </header>
-            <div>
+            <div className={'py-6 md:py-0'}>
                 <header>
                     <h2 className={'font-bold text-xl'}>
                         Características de nuestros filtros de aire:
@@ -22,7 +22,12 @@ const FilterSection = () => {
                     <li>Característica 4</li>
                 </ul>
             </div>
-            <AsideSectionPhoto imageTitle={"Filtros plisados de aire"} imageLink={"/productos"} imageSrc={"/pleatedFilter.jpg"}/>
+            <AsideSectionPhoto
+                imageTitle={"Filtros plisados de aire"}
+                imageLink={"/productos"}
+                imageSrc={"/pleatedFilter.jpg"}
+                imgAlt={'Air pleated filter'}
+            />
         </section>
     )
 }

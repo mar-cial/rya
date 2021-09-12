@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import AsideSectionPhoto from "../AsideSectionPhoto";
 
 const CortinasDeAireSection = () => {
     return (
@@ -9,7 +10,7 @@ const CortinasDeAireSection = () => {
                     Evite la pérdida de frío o de calor, sin fricción al pasar. Las cortinas de aire evitan la transferencia de temperaturas así como repelen contaminantes e insectos.
                 </p>
             </header>
-            <div>
+            <div className={'py-6 md:py-0'}>
                 <header>
                     <h2 className={'font-bold text-xl'}>
                         Características de nuestras cortinas:
@@ -22,15 +23,13 @@ const CortinasDeAireSection = () => {
                     <li>Característica 4</li>
                 </ul>
             </div>
-            <aside className={'border-2 border-black grid'}>
-                <h3 className={'font-bold text-xl'}>
-                    Foto de cortina de plástico
-                </h3>
-                <div className={'flex items-center justify-center border-2 border-black h-40'}>
-                    <p>Aquí habrá una foto</p>
-                </div>
-                <Link href={'/'}><a className={'flex justify-center bg-black text-white font-bold rounded-sm'}>Saber más</a></Link>
-            </aside>
+            <AsideSectionPhoto
+                imgAlt={'Cortinas de aire'}
+                imageTitle={'Cortinas de aire'}
+                imageLink={"/productos"}
+                imageSrc={'/cortinasDeAire.jpg'}
+
+            />
         </section>
     )
 }

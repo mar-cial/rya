@@ -1,3 +1,5 @@
+import AsideSectionPhoto from "../AsideSectionPhoto";
+
 const CortinasPVCSection = () => {
     return (
         <section className={'grid md:grid-cols-3 md:gap-6 py-8'}>
@@ -7,7 +9,7 @@ const CortinasPVCSection = () => {
                     Evite la pérdida de frío o de calor, sin fricción al pasar. Las cortinas de aire evitan la transferencia de temperaturas así como repelen contaminantes e insectos.
                 </p>
             </header>
-            <div>
+            <div className={'py-6 md:py-0'}>
                 <header>
                     <h2 className={'font-bold text-xl'}>
                         Características de nuestras cortinas:
@@ -20,14 +22,12 @@ const CortinasPVCSection = () => {
                     <li>Característica 4</li>
                 </ul>
             </div>
-            <aside className={'border-2 border-black'}>
-                <h3 className={'font-bold text-xl'}>
-                    Foto de cortina de plástico
-                </h3>
-                <div className={'flex items-center justify-center border-2 border-black h-40'}>
-                    <p>Aquí habrá una foto</p>
-                </div>
-            </aside>
+            <AsideSectionPhoto
+                imageSrc={'/plasticCurtainDoor.jpg'}
+                imageLink={"/productos"}
+                imageTitle={"Cortinas de plástico PVC"}
+                imgAlt={'Cortinas de plástico PVC'}
+            />
         </section>
     )
 }

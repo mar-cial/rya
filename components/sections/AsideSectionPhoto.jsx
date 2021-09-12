@@ -12,7 +12,7 @@ import Image from 'next/image'
 
 // Beginning of component: AsideSectionPhoto
 
-const AsideSectionPhoto = ({imageTitle, imageSrc, imageLink}) => {
+const AsideSectionPhoto = ({imageTitle, imageSrc, imageLink, imgAlt}) => {
     return (
         <aside className={'border-2 border-black grid rounded-md p-2'}>
            <header className={'flex justify-center py-2 border-b-2'}>
@@ -20,8 +20,8 @@ const AsideSectionPhoto = ({imageTitle, imageSrc, imageLink}) => {
                    {imageTitle}
                </h3>
            </header>
-            <div>
-                <Image src={imageSrc} alt={"Air pleated filter"} layout={'responsive'} width={1920} height={1080}/>
+            <div className={'py-2'}>
+                <Image src={imageSrc} alt={imgAlt} layout={'responsive'} width={1920} height={1080} className={'rounded-md'}/>
             </div>
             <Link href={imageLink}>
                 <a className={'flex justify-center bg-black text-white font-bold rounded-md py-1'}>Saber más</a>

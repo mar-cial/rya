@@ -1,3 +1,5 @@
+import AsideSectionPhoto from "../AsideSectionPhoto";
+
 const DockLevelerSection = () => {
     return (
         <section className={'grid md:grid-cols-3 md:gap-6 py-8'}>
@@ -7,7 +9,7 @@ const DockLevelerSection = () => {
                     Dock levelers que aguantan desde 10,000 hasta 40,000 libras. Lo mejor en la industria para cargar y descargar material de manera segura y eficiente.
                 </p>
             </header>
-            <div>
+            <div className={'py-6 md:py-0'}>
                 <header>
                     <h2 className={'font-bold text-xl'}>
                         Características de nuestros Dock Levelers:
@@ -20,14 +22,12 @@ const DockLevelerSection = () => {
                     <li>Característica 4</li>
                 </ul>
             </div>
-            <aside className={'border-2 border-black'}>
-                <h3 className={'font-bold text-xl'}>
-                    Foto de cortina de plástico
-                </h3>
-                <div className={'flex items-center justify-center border-2 border-black h-40'}>
-                    <p>Aquí habrá una foto</p>
-                </div>
-            </aside>
+            <AsideSectionPhoto
+                imageSrc={'/dockLevelers.png'}
+                imageLink={'/productos'}
+                imageTitle={'Dock levelers'}
+                imgAlt={'Dock levelers'}
+            />
         </section>
     )
 }
