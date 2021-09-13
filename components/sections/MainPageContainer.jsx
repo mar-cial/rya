@@ -11,7 +11,7 @@
 // Beginning of component: MainPageContainer
 const MainPageContainer = ({children}) => {
     return (
-        <main className={'py-6'}>
+        <main >
             {children}
         </main>
     )

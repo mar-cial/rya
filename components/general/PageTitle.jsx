@@ -11,7 +11,7 @@
 // Beginning of component: PageTitle
 const PageTitle = ({children}) => {
     return (
-        <h1 className={'text-4xl font-bold'}>
+        <h1 className={'text-4xl font-bold py-6'}>
             {children}
         </h1>
     )

@@ -18,9 +18,7 @@ const Layout = ({children}) => {
     const [openMenu, setOpenMenu] = useState(false)
 
     const toggle = () => {
-        console.log(`Current state: ${openMenu}`)
         setOpenMenu(!openMenu)
-        console.log(`State después de ser cambiado: ${openMenu}`)
     }
 
     return (
