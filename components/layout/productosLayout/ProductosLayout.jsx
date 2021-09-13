@@ -9,11 +9,10 @@
 // function imports
 import Link from 'next/link'
 import PageTitle from "../../general/PageTitle";
-import { filtros} from "../../../pages/productos/filtros/filtrosData";
+import { filtros } from "../../../pages/productos/filtros/filtrosData";
 
 // Beginning of component: ProductosLayout
-
-const ProductosLayout = ({title, children, selectedItem, selectedCategory}) => {
+const ProductosLayout = ({title, children}) => {
     const categoryRoutes = [
         {
             url: "/productos/filtros",
@@ -40,18 +39,18 @@ const ProductosLayout = ({title, children, selectedItem, selectedCategory}) => {
             texto: "Dock Levelers"
         }
     ]
+
     return (
         <>
             <PageTitle>{title}</PageTitle>
-            <div className={'grid md:grid-cols-12 gap-2 h-32'}>
-
-                <div className={'md:col-span-3 bg-red-100 grid gap-6 border-2 border-black p-4'}>
+            <div className={'grid md:grid-cols-12 gap-2'}>
+                <div className={'md:col-span-2  gap-6 p-4'}>
                     <header className={'border-2 border-black flex justify-center'}>
                         <h2 className={'font-bold text-2xl'}>Categorias</h2>
                     </header>
 
                     {/* Listado de categorias */}
-                    <div className={'border-2 border-black'}>
+                    <div className={'border-2 border-black flex flex-col mt-4'}>
                         <ul className={'grid gap-4 p-4'}>
                             {
                                 categoryRoutes.map((v, i) => {
@@ -68,28 +67,7 @@ const ProductosLayout = ({title, children, selectedItem, selectedCategory}) => {
                     </div>
                 </div>
 
-                { /* Main content de las categorias */}
-                <div className={'md:col-span-7 bg-blue-100 p-4 border-2 border-black'}>
-                    <header className={'border-2 border-black flex justify-center'}>
-                        <h2 className={'font-bold text-2xl'}>Productos dentro de esta categoría</h2>
-                    </header >
-                    <div className={'grid'}>
-                        {children}
-                    </div>
-                </div>
-
-                {/* Detalle del producto*/}
-                <div className={'md:col-span-2 bg-blue-100 p-4'}>
-                    <header className={'border-2 border-black flex justify-center'}>
-                        <h2 className={'font-bold text-2xl'}>Detalle</h2>
-                        <li>
-                            {
-                                console.log(filtros.find((v) => v === selectedItem))
-                            }
-                        </li>
-                    </header>
-                </div>
-
+                {children}
             </div>
         </>
     )

@@ -5,7 +5,7 @@ const Header = ({status, action}) => {
         <header className={'grid grid-cols-2'}>
 
             <div className={'flex items-center '}>
-                <Link href={"/"} ><Image width={90} height={90} src={"/logo.svg"} className={'cursor-pointer'} /></Link>
+                <Image width={90} height={90} src={"/logo.svg"} />
                 <Link href={"/"} ><a className={'font-bold md:text-2xl cursor-pointer'}>Rya Soluciones Ambientales</a></Link>
             </div>
 
