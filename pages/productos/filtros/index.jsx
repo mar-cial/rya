@@ -56,7 +56,7 @@ const Index = () => {
                 <div className={'py-6'}>
                     {
                         selected !== 0 && (
-                            <div className={'p-4 border-black border-2 grid gap-4'}>
+                            <div className={'p-3 border-black border-2 grid gap-4'}>
                                 <h3 className={'font-bold text-3xl'}>{selectedItem.title}</h3>
                                 <Image src={`/${selectedItem.image}.jpg`} layout={'responsive'} height={1080} width={1920}/>
                                 <span>{`Resistencia inicial: ${selectedItem.resistenciaInicial} w.g.`}</span>
@@ -64,7 +64,6 @@ const Index = () => {
                                 <span>{`Precio en dólares: $${selectedItem.precio}`}</span>
                                 <motion.a
                                     className={'py-2 border-black border-2 flex justify-center rounded-md cursor-pointer'}
-
                                     whileHover = {{y: -5}}
                                     whileTap = {{y: 0}}
                                     href={'/fichaTecnica.pdf'}
