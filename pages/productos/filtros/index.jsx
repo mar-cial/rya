@@ -60,8 +60,8 @@ const Index = () => {
                                 <h3 className={'font-bold text-3xl'}>{selectedItem.title}</h3>
                                 <Image src={`/${selectedItem.image}.jpg`} layout={'responsive'} height={1080} width={1920}/>
                                 <span>{`Resistencia inicial: ${selectedItem.resistenciaInicial} w.g.`}</span>
-                                <span>{`Resistencia final: ${selectedItem.resistenciaFinal}`}</span>
-                                <span>{`Precio en dólares: $${selectedItem.precio}`}</span>
+                                <span>{`Resistencia final: ${selectedItem.resistenciaFinal} w.g.`}</span>
+                                <span>{`Precio en dólares: $${selectedItem.precio.toFixed(2)}`}</span>
                                 <motion.a
                                     className={'py-2 border-black border-2 flex justify-center rounded-md cursor-pointer'}
                                     whileHover = {{y: -5}}
