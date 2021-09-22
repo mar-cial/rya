@@ -9,7 +9,7 @@
 // function imports
 import Image from 'next/image'
 import {useState} from "react";
-import {filtros} from "./filtrosData";
+import {Filtros} from "./filtrosData";
 import {motion} from "framer-motion";
 
 // Beginning of component: index
@@ -18,18 +18,18 @@ import CartaDeFiltro from "./CartaDeFiltro";
 
 const Index = () => {
     const [selected, setSelected] = useState(0);
-    const selectedItem = filtros[selected]
+    const selectedItem = Filtros[selected]
     return (
-        <ProductosLayout title={'Filtros de aire, desde MERV 7 hasta filtros HEPA'}>
+        <ProductosLayout title={'Filtros de aire, desde MERV 7 hasta Filtros HEPA'}>
 
-            { /* Main content de las categorias */}
+            { /* Main content de las Categorias */}
             <div className={'md:col-span-7 p-4'}>
                 <header className={'border-2 border-black flex justify-center'}>
                     <h2 className={'font-bold text-2xl'}>Productos dentro de esta categoría</h2>
                 </header >
                 <div className={'grid md:grid-cols-3 gap-6 py-6'}>
                     {
-                        filtros.map((v, i) => {
+                        Filtros.map((v, i) => {
                             return (
                                 <CartaDeFiltro
                                     titulo={v.title}

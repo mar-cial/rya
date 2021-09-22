@@ -47,8 +47,8 @@ const NavigationContainer = ({ }) => {
 
                         onClick={() => setStatus(!status)}
                         className={'font-bold md:text-xl px-2 py-1 bg-black text-white rounded-md border-black border-2'}
-                        whileHover={{y: -5, backgroundColor: 'white', color: 'black', border: 'solid 2px black'}}
-                        whileTap={{y: 0,}}
+                        whileHover={{y: -5}}
+                        whileTap={{y: 0}}
 
                     >
                         {status ? "Cerrar menú" : "Abrir menú"}

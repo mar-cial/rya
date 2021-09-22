@@ -9,7 +9,7 @@
 // function imports
 import Link from 'next/link'
 import PageTitle from "../../general/PageTitle";
-import { filtros } from "../../../pages/productos/filtros/filtrosData";
+import { Filtros } from "../../../pages/productos/filtros/filtrosData";
 
 // Beginning of component: ProductosLayout
 const ProductosLayout = ({title, children}) => {
@@ -49,7 +49,7 @@ const ProductosLayout = ({title, children}) => {
                         <h2 className={'font-bold text-2xl'}>Categorias</h2>
                     </header>
 
-                    {/* Listado de categorias */}
+                    {/* Listado de Categorias */}
                     <div className={'border-2 border-black flex flex-col mt-4'}>
                         <ul className={'grid gap-4 p-4'}>
                             {

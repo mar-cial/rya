@@ -1,5 +1,5 @@
 
-export const categorias = [
+export const Categorias = [
     {
         id: 1,
         categoryTitle: "Filtros de aire",
@@ -102,3 +102,5 @@ export const categorias = [
         ]
     }
 ];
+
+export default Categorias;

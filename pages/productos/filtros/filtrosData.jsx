@@ -1,7 +1,7 @@
 /*
 * Created by cesarmarcial on 12/09/21
 */
-export const filtros = [
+export const Filtros = [
     {
         id: 1,
         title: "MERV 7 PLEAT",
@@ -64,3 +64,5 @@ export const filtros = [
         categoria: "prefiltro"
     },
 ]
+
+export default Filtros;
