@@ -9,7 +9,7 @@
 // function imports
 import Image from 'next/image'
 import {useState} from "react";
-import {Filtros} from "./filtrosData";
+import Filtros from "../../../data/filtrosData";
 import {motion} from "framer-motion";
 
 // Beginning of component: index

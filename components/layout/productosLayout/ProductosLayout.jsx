@@ -9,7 +9,7 @@
 // function imports
 import Link from 'next/link'
 import PageTitle from "../../general/PageTitle";
-import { Filtros } from "../../../pages/productos/filtros/filtrosData";
+import { Filtros } from "../../../data/filtrosData";
 
 // Beginning of component: ProductosLayout
 const ProductosLayout = ({title, children}) => {

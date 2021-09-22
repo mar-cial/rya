@@ -1,5 +1,4 @@
-
-export const Categorias = [
+const Categorias = [
     {
         id: 1,
         categoryTitle: "Filtros de aire",

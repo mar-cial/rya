@@ -1,7 +1,7 @@
 /*
 * Created by cesarmarcial on 12/09/21
 */
-export const Filtros = [
+const Filtros = [
     {
         id: 1,
         title: "MERV 7 PLEAT",
